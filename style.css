@@ -1,0 +1,110 @@
+/* style.css - Minimal Material 3 inspired styling for the Privacy Policy site */
+
+:root {
+  --md-sys-color-primary: #6750A4; /* Modern expiry/productivity accent */
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-surface: #FFFFFF;
+  --md-sys-color-on-surface: #1C1B1F;
+  --md-sys-color-background: #F8F9FA;
+  --md-sys-color-outline: #79747E;
+  --md-typography-font-family: 'Roboto', sans-serif;
+  --md-typography-headline1: 2.5rem; /* Simula-like for major headings */
+  --md-typography-headline2: 2rem;  /* Simula-like for sub-headings */
+  --md-typography-body: 1rem;      /* Funnel Sans-like body */
+  --spacing-unit: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --md-sys-color-surface: #121212;
+    --md-sys-color-on-surface: #E1E1E1;
+    --md-sys-color-background: #121212;
+    --md-sys-color-outline: #BBBBBB;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--md-typography-font-family);
+  color: var(--md-sys-color-on-surface);
+  background-color: var(--md-sys-color-background);
+  line-height: 1.5;
+}
+
+header {
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  padding: calc(var(--spacing-unit) * 2) var(--spacing-unit);
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: var(--md-typography-headline1);
+  font-weight: 600;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+}
+
+main {
+  max-width: 800px;
+  margin: var(--spacing-unit) auto;
+  padding: 0 var(--spacing-unit);
+}
+
+section {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+section h2 {
+  font-size: var(--md-typography-headline2);
+  margin-top: 0;
+  color: var(--md-sys-color-primary);
+}
+
+section p, section li {
+  font-size: var(--md-typography-body);
+  margin: 0.5rem 0;
+}
+
+section ul {
+  padding-left: 1.5rem;
+}
+
+.card {
+  background: var(--md-sys-color-surface);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding: var(--spacing-unit);
+  margin-top: var(--spacing-unit);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--md-sys-color-on-surface);
+  padding: var(--spacing-unit);
+  border-top: 1px solid var(--md-sys-color-outline);
+}
+
+a {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  header p {
+    font-size: 0.9rem;
+  }
+}
